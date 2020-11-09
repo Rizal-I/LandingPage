@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: landing
-        image: rizaleko/landing
+        image: rizaleko/landing:tag
         ports:
         - containerPort: 80
 ---
