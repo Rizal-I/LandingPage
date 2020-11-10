@@ -4,8 +4,7 @@ pipeline {
     agent any
     stages {
         
-        stage('Git Pull from Github') {
-            git credentialsId: 'githubpassword', url: 'https://github.com/Rizal-I/LandingPage.git'
+        stage('Git Pull from Github') {            
             sh('sed -i "s/tag/$BUILD_NUMBER/g" index.html')
         }
         stage('Build Docker Image') {
