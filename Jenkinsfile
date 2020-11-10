@@ -25,12 +25,12 @@ pipeline {
            }
         stage('locate namespace') {
             steps {
-                sh('sed -i "s/default/staging/g" landing.yml')
+                sh('sed -i "s/default/defautl/g" landing.yml')
                 }
            }
         stage('add domain') {
             steps {
-                sh('sed -i "s/landing.ridjal.com/slanding.ridjal.com/g" landing.yml')
+                sh('sed -i "s/landing.ridjal.com/landing.ridjal.com/g" landing.yml')
                 }
            }
         stage('deploy') {
