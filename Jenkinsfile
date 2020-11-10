@@ -25,7 +25,7 @@ pipeline {
            }
         stage('locate namespace') {
             steps {
-                sh('sed -i "s/default/defautl/g" landing.yml')
+                sh('sed -i "s/default/production/g" landing.yml')
                 }
            }
         stage('add domain') {
