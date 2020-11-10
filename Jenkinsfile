@@ -1,4 +1,4 @@
-aenv.DOCKER_REGISTRY = 'rizaleko'
+env.DOCKER_REGISTRY = 'rizaleko'
 env.DOCKER_IMAGE_NAME = 'landing'
 pipeline {
     agent any
