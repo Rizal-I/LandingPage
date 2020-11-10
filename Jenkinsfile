@@ -1,4 +1,4 @@
-env.DOCKER_REGISTRY = 'rizaleko'
+aenv.DOCKER_REGISTRY = 'rizaleko'
 env.DOCKER_IMAGE_NAME = 'landing'
 pipeline {
     agent any
@@ -25,12 +25,12 @@ pipeline {
            }
         stage('locate namespace') {
             steps {
-                sh('sed -i "s/default/production/g" landing.yml')
+                sh('sed -i "s/default/default/g" landing.yml')
                 }
            }
         stage('add domain') {
             steps {
-                sh('sed -i "s/landing.ridjal.com/planding.ridjal.com/g" landing.yml')
+                sh('sed -i "s/landing.ridjal.com/landing.ridjal.com/g" landing.yml')
                 }
            }
         stage('deploy') {
